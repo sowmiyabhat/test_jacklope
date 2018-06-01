@@ -1,11 +1,8 @@
-node {
+node('docker') {
+    checkout scm
     stage('Build') {
-        echo 'Building....'
-    }
-    stage('Test') {
-        echo 'Building....'
-    }
-    stage('Deploy') {
-        echo 'Deploying....'
+        docker.image('python:3.5.1').inside {
+            sh 'python --version'
+        }
     }
 }
