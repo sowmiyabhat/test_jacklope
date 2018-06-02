@@ -19,7 +19,7 @@ node {
         sh './scripts/build_test.sh test'
       }
     }
-
+  }
 
 def notifyBuild(String buildStatus = 'STARTED') {
   // build status of null means successful
