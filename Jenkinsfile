@@ -18,7 +18,7 @@ node {
       stage('Test') {
         sh './scripts/build_test.sh test'
       }
-    }
+    } finally{}
   }
 
 def notifyBuild(String buildStatus = 'STARTED') {
