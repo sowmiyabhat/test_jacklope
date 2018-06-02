@@ -7,14 +7,12 @@ node {
         checkout scm
 
     }
-
-
   try {
     stage('Build') {
         sh 'scripts/build.sh build'
         }
       } finally {
-         catch(e) {}
+
       }
 
       stage('Test') {
